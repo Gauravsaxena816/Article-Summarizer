@@ -45,10 +45,12 @@ def summarize():
     summary.config(state='disabled')
     sentiment.config(state='disabled')
 
-root = tk.Tk()
-root.title("Article Summarizer")
-root.geometry('1200x600')
 
+#creating a Gui interface using tkinter
+root = tk.Tk()
+root.title("Article Summarizer") #title
+root.geometry('1200x600')
+#------------------------------------------------------------Label--------------------------------------------------------------------------------------
 tlabel = tk.Label(root, text = "Title")
 tlabel.pack()
 
@@ -90,7 +92,9 @@ ulabel.pack()
 utext = tk.Text(root,height=1,width=140)
 utext.pack()
 
+#button
 btn = tk.Button(root,text='Summarize',command=summarize)
 btn.pack()
 
 root.mainloop()
+#----------------------------------------------------------------------------------------------------------------------------------------------------------
