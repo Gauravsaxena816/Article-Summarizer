@@ -3,8 +3,8 @@ from newspaper import Article
 from textblob import TextBlob # for sentiment analysis
 import tkinter as tk # for GUI 
 
-nltk.download('punkt')
-def summarize():
+nltk.download('punkt') #one time use can delete later, using for downloading model
+def summarize(): #function for summarizing
     url = utext.get("1.0","end").strip()
     article = Article(url)
     article.download()
@@ -93,7 +93,7 @@ utext = tk.Text(root,height=1,width=140)
 utext.pack()
 
 #button
-btn = tk.Button(root,text='Summarize',command=summarize)
+btn = tk.Button(root,text='Summarize',command=summarize) #referring the function "summarize"
 btn.pack()
 
 root.mainloop()
